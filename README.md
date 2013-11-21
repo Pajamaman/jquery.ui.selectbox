@@ -60,6 +60,6 @@ Then the default selected value will be "Select beard length...". If you want to
 
 ### To-do
 
-I don't know if the value attribute is value on a div element, or if I need to use something else there. The same goes for the name attribute.
+I don't know if the value attribute is valid on a div element, or if I need to use something else there. The same goes for the name attribute.
 
 So far, I've only tested in Firefox 17.
