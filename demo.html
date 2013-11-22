@@ -91,6 +91,11 @@
                         this.icon = $(this.options.icon);
                         this.label = $('<div></div>');
                         
+                        if (this.element.attr('name')) {
+                            this.field.attr('name', this.element.attr('name'));
+                            this.element.removeAttr('name');
+                        }
+                        
                         this._setValue(this.options.value);
                         
                         this.element.append(this.label).append(this.dropdown).append(this.field)
