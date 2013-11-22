@@ -1,6 +1,6 @@
 This plugin serves as a replacement for native browser select elements because they are hard to style. The markup is not very different from a normal select element. For example, this:
 
-    <select name="custard-preference">
+    <select id="custard-preference" name="custard-preference">
         <option>Select one...</option>
         <option value="0">No custard</option>
         <option value="1">Some custard</option>
@@ -9,7 +9,7 @@ This plugin serves as a replacement for native browser select elements because t
 
 Becomes this:
 
-    <div name="custard-preference">
+    <div id="custard-preference" name="custard-preference">
         <div>Select one...</div>
         <div value="0">No custard</div>
         <div value="1">Some custard</div>
@@ -18,26 +18,22 @@ Becomes this:
 
 Don't forget the script call:
 
-    $('select').selectbox();
+    $('#custard-preference').selectbox();
 
 Finally, copy the styles from demo.html into your stylesheet and you're good to go.
 
 ### Options
 
 #### icon
-
 Type: String
-
 Default: `<i class="icon-caret-down"></i>`
 
 By default it will use an icon from [Font Awesome](http://fontawesome.io/) version 3.2.1, but you can use jQuery UI icons, single characters, or whatever you want:
 
-    $('select').selectbox({ icon: '<span class="ui-icon ui-icon-circle-triangle-s"></span>' });
+    $('.selectbox').selectbox({ icon: '<span class="ui-icon ui-icon-circle-triangle-s"></span>' });
 
 #### value
-
 Type: String
-
 Default: null
 
 The default selected value will be the first entry in the selectbox. For instance, if your markup looks like this:
