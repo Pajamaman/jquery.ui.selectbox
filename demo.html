@@ -6,7 +6,7 @@
             body {
                 font-family: Verdana;
             }
-            .select {
+            .selectbox {
                 border: 1px solid #aaa;
                 -webkit-border-radius: 3px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
                 border-radius: 3px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
@@ -15,12 +15,12 @@
                 position: relative;
                 white-space: nowrap;
             }
-            .select i {
+            .selectbox i {
                 position: absolute;
                 right: 0.3em;
                 top: 0.4em;
             }
-            .select-dropdown {
+            .selectbox-dropdown {
                 background-color: #fff;
                 border: 1px solid #aaa;
                 -webkit-border-radius: 3px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
@@ -30,12 +30,12 @@
                 position: absolute;
                 z-index: 1;
             }
-            .select div:first-child,
-            .select-dropdown div {
+            .selectbox div:first-child,
+            .selectbox-dropdown div {
                 padding: 0.25em 1.25em 0.25em 0.25em;
             }
-            .select div:first-child:hover,
-            .select-dropdown div:hover {
+            .selectbox div:first-child:hover,
+            .selectbox-dropdown div:hover {
                 background-color: #eee;
             }
         </style>
@@ -46,7 +46,7 @@
         <div>
             I am a
             
-            <div class="selectbox" name="descriptor">
+            <div class="select" name="descriptor">
                 <div>(descriptor)</div>
                 <div value="tough">tough</div>
                 <div value="clever">clever</div>
@@ -64,7 +64,7 @@
             
             who
             
-            <div class="selectbox" name="focus">
+            <div class="select" name="focus">
                 <div>(focus)</div>
                 <div value="controls">controls beasts</div>
                 <div value="crafts">crafts illusions</div>
@@ -86,7 +86,7 @@
                     _create: function () {
                         var self = this;
                         
-                        this.dropdown = $('<div class="select-dropdown"></div>').append(this.element.children());
+                        this.dropdown = $('<div class="selectbox-dropdown"></div>').append(this.element.children());
                         this.field = $('<input type="hidden" />');
                         this.icon = $(this.options.icon);
                         this.label = $('<div></div>');
@@ -94,7 +94,7 @@
                         this._setValue(this.options.value);
                         
                         this.element.append(this.label).append(this.dropdown).append(this.field)
-                            .addClass('select').css('width', this.dropdown.css('width'));
+                            .addClass('selectbox').css('width', this.dropdown.css('width'));
                         
                         $('html').click(function (e) {
                             var target = $(e.target);
@@ -140,7 +140,7 @@
             }(jQuery));
             
             $(function () {
-                $('.selectbox').selectbox();
+                $('.select').selectbox();
                 $('#select-type').selectbox({
                     icon: '<i class="icon-sort"></i>',
                     value: 'glaive'

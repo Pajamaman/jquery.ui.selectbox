@@ -30,7 +30,7 @@ Default: `<i class="icon-caret-down"></i>`
 
 By default it will use an icon from [Font Awesome](http://fontawesome.io/) version 3.2.1, but you can use jQuery UI icons, single characters, or whatever you want:
 
-    $('.selectbox').selectbox({ icon: '<span class="ui-icon ui-icon-circle-triangle-s"></span>' });
+    $('.select').selectbox({ icon: '<span class="ui-icon ui-icon-circle-triangle-s"></span>' });
 
 #### value
 Type: String
