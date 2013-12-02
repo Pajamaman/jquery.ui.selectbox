@@ -16,11 +16,9 @@ Becomes this:
         <div value="2">Boat loads of custard</div>
     </div>
 
-Don't forget the script call:
+With a simple call to the selectbox function:
 
     $('#custard-preference').selectbox();
-
-Finally, copy the styles from demo.html into your stylesheet and you're good to go.
 
 ### Options
 
