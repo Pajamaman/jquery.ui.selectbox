@@ -13,6 +13,9 @@
                 padding: 1em 0;
                 width: 50%;
             }
+            .indent {
+                padding-left: 2em;
+            }
             .row {
                 margin: 1em 0;
                 overflow: hidden;
@@ -24,188 +27,198 @@
         
         <h3>Example 1: Comparison</h3>
         
-        <p>Native browser select element:</p>
-        
-        <select id="example-1-a" name="example-1-a">
-            <option>Select one...</option>
-            <option value="0">Yes</option>
-            <option value="1">No</option>
-            <option value="2">Maybe</option>
-        </select>
-        
-        <p>New hotness:</p>
-        
-        <div id="example-1-b" name="example-1-b">
-            <div>Select one...</div>
-            <div value="0">Yes</div>
-            <div value="1">No</div>
-            <div value="2">Maybe</div>
+        <div class="indent">
+            <p>Native browser select element:</p>
+            
+            <select id="example-1-a" name="example-1-a">
+                <option>Select one...</option>
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+                <option value="2">Maybe</option>
+            </select>
+            
+            <p>New hotness:</p>
+            
+            <div id="example-1-b" name="example-1-b">
+                <div>Select one...</div>
+                <div value="0">Yes</div>
+                <div value="1">No</div>
+                <div value="2">Maybe</div>
+            </div>
+            
+            <p>Code: (<a class="code-toggle" href="#example-1-code">toggle</a>)</p>
+            
+            <pre id="example-1-code">
+            &lt;div id=&quot;example-1-b&quot; name=&quot;example-1-b&quot;&gt;
+                &lt;div&gt;Select one...&lt;/div&gt;
+                &lt;div value=&quot;0&quot;&gt;Yes&lt;/div&gt;
+                &lt;div value=&quot;1&quot;&gt;No&lt;/div&gt;
+                &lt;div value=&quot;2&quot;&gt;Maybe&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                $('#example-1-b').selectbox();
+            &lt;/script&gt;</pre>
         </div>
-        
-        <p>Code: (<a class="code-toggle" href="#example-1-code">toggle</a>)</p>
-        
-        <pre id="example-1-code">
-        &lt;div id=&quot;example-1-b&quot; name=&quot;example-1-b&quot;&gt;
-            &lt;div&gt;Select one...&lt;/div&gt;
-            &lt;div value=&quot;0&quot;&gt;Yes&lt;/div&gt;
-            &lt;div value=&quot;1&quot;&gt;No&lt;/div&gt;
-            &lt;div value=&quot;2&quot;&gt;Maybe&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;script&gt;
-            $('#example-1-b').selectbox();
-        &lt;/script&gt;</pre>
         
         <h3>Example 2: Avoid FOUC</h3>
         
-        <p>Avoid FOUC by adding the selectbox class to your element before calling the selectbox function:</p>
-        
-        <div class="selectbox" id="example-2" name="example-2">
-            <div>Select one...</div>
-            <div value="1">One</div>
-            <div value="2">Two</div>
-            <div value="3">Three</div>
-            <div value="4">Four</div>
-            <div value="5">Five</div>
-            <div value="6">Six</div>
-            <div value="7">Seven</div>
-            <div value="8">Eight</div>
-            <div value="9">Nine</div>
+        <div class="indent">
+            <p>Avoid FOUC by adding the selectbox class to your element before calling the selectbox function:</p>
+            
+            <div class="selectbox" id="example-2" name="example-2">
+                <div>Select one...</div>
+                <div value="1">One</div>
+                <div value="2">Two</div>
+                <div value="3">Three</div>
+                <div value="4">Four</div>
+                <div value="5">Five</div>
+                <div value="6">Six</div>
+                <div value="7">Seven</div>
+                <div value="8">Eight</div>
+                <div value="9">Nine</div>
+            </div>
+            
+            <p>Code: (<a class="code-toggle" href="#example-2-code">toggle</a>)</p>
+            
+            <pre id="example-2-code">
+            &lt;div class=&quot;selectbox&quot; id=&quot;example-2&quot; name=&quot;example-2&quot;&gt;
+                &lt;div&gt;Select one...&lt;/div&gt;
+                &lt;div value=&quot;1&quot;&gt;One&lt;/div&gt;
+                &lt;div value=&quot;2&quot;&gt;Two&lt;/div&gt;
+                &lt;div value=&quot;3&quot;&gt;Three&lt;/div&gt;
+                &lt;div value=&quot;4&quot;&gt;Four&lt;/div&gt;
+                &lt;div value=&quot;5&quot;&gt;Five&lt;/div&gt;
+                &lt;div value=&quot;6&quot;&gt;Six&lt;/div&gt;
+                &lt;div value=&quot;7&quot;&gt;Seven&lt;/div&gt;
+                &lt;div value=&quot;8&quot;&gt;Eight&lt;/div&gt;
+                &lt;div value=&quot;9&quot;&gt;Nine&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                $('#example-2').selectbox();
+            &lt;/script&gt;</pre>
         </div>
-        
-        <p>Code: (<a class="code-toggle" href="#example-2-code">toggle</a>)</p>
-        
-        <pre id="example-2-code">
-        &lt;div class=&quot;selectbox&quot; id=&quot;example-2&quot; name=&quot;example-2&quot;&gt;
-            &lt;div&gt;Select one...&lt;/div&gt;
-            &lt;div value=&quot;1&quot;&gt;One&lt;/div&gt;
-            &lt;div value=&quot;2&quot;&gt;Two&lt;/div&gt;
-            &lt;div value=&quot;3&quot;&gt;Three&lt;/div&gt;
-            &lt;div value=&quot;4&quot;&gt;Four&lt;/div&gt;
-            &lt;div value=&quot;5&quot;&gt;Five&lt;/div&gt;
-            &lt;div value=&quot;6&quot;&gt;Six&lt;/div&gt;
-            &lt;div value=&quot;7&quot;&gt;Seven&lt;/div&gt;
-            &lt;div value=&quot;8&quot;&gt;Eight&lt;/div&gt;
-            &lt;div value=&quot;9&quot;&gt;Nine&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;script&gt;
-            $('#example-2').selectbox();
-        &lt;/script&gt;</pre>
         
         <h3>Example 3: Use a different icon</h3>
         
-        <div id="example-3" name="example-3">
-            <div>Select one...</div>
-            <div value="0">Yes</div>
-            <div value="1">No</div>
-            <div value="2">Maybe</div>
+        <div class="indent">
+            <div id="example-3" name="example-3">
+                <div>Select one...</div>
+                <div value="0">Yes</div>
+                <div value="1">No</div>
+                <div value="2">Maybe</div>
+            </div>
+            
+            <p>Code: (<a class="code-toggle" href="#example-3-code">toggle</a>)</p>
+            
+            <pre id="example-3-code">
+            &lt;div id=&quot;example-3&quot; name=&quot;example-3&quot;&gt;
+                &lt;div&gt;Select one...&lt;/div&gt;
+                &lt;div value=&quot;0&quot;&gt;Yes&lt;/div&gt;
+                &lt;div value=&quot;1&quot;&gt;No&lt;/div&gt;
+                &lt;div value=&quot;2&quot;&gt;Maybe&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                $('#example-3').selectbox({ 'icon': '&lt;i class=&quot;icon-sort&quot;&gt;&lt;/i&gt;' });
+            &lt;/script&gt;</pre>
         </div>
-        
-        <p>Code: (<a class="code-toggle" href="#example-3-code">toggle</a>)</p>
-        
-        <pre id="example-3-code">
-        &lt;div id=&quot;example-3&quot; name=&quot;example-3&quot;&gt;
-            &lt;div&gt;Select one...&lt;/div&gt;
-            &lt;div value=&quot;0&quot;&gt;Yes&lt;/div&gt;
-            &lt;div value=&quot;1&quot;&gt;No&lt;/div&gt;
-            &lt;div value=&quot;2&quot;&gt;Maybe&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;script&gt;
-            $('#example-3').selectbox({ 'icon': '&lt;i class=&quot;icon-sort&quot;&gt;&lt;/i&gt;' });
-        &lt;/script&gt;</pre>
         
         <h3>Example 4: Use a default value</h3>
         
-        <div id="example-4" name="example-4">
-            <div>Select one...</div>
-            <div value="0">Yes</div>
-            <div value="1">No</div>
-            <div value="2">Maybe</div>
+        <div class="indent">
+            <div id="example-4" name="example-4">
+                <div>Select one...</div>
+                <div value="0">Yes</div>
+                <div value="1">No</div>
+                <div value="2">Maybe</div>
+            </div>
+            
+            <p>Code: (<a class="code-toggle" href="#example-4-code">toggle</a>)</p>
+            
+            <pre id="example-4-code">
+            &lt;div id=&quot;example-4&quot; name=&quot;example-4&quot;&gt;
+                &lt;div&gt;Select one...&lt;/div&gt;
+                &lt;div value=&quot;0&quot;&gt;Yes&lt;/div&gt;
+                &lt;div value=&quot;1&quot;&gt;No&lt;/div&gt;
+                &lt;div value=&quot;2&quot;&gt;Maybe&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                $('#example-4').selectbox({ 'value': '2' });
+            &lt;/script&gt;</pre>
         </div>
-        
-        <p>Code: (<a class="code-toggle" href="#example-4-code">toggle</a>)</p>
-        
-        <pre id="example-4-code">
-        &lt;div id=&quot;example-4&quot; name=&quot;example-4&quot;&gt;
-            &lt;div&gt;Select one...&lt;/div&gt;
-            &lt;div value=&quot;0&quot;&gt;Yes&lt;/div&gt;
-            &lt;div value=&quot;1&quot;&gt;No&lt;/div&gt;
-            &lt;div value=&quot;2&quot;&gt;Maybe&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;script&gt;
-            $('#example-4').selectbox({ 'value': '2' });
-        &lt;/script&gt;</pre>
         
         <h3>Example 5: Select all da selectboxes</h3>
         
-        <p>You can select your selectboxes just like any other jQuery plugin:</p>
-        
-        <div class="row">
-            I am a
+        <div class="indent">
+            <p>You can select your selectboxes just like any other jQuery plugin:</p>
             
-            <div class="select" name="descriptor">
-                <div>(descriptor)</div>
-                <div value="tough">tough</div>
-                <div value="clever">clever</div>
-                <div value="graceful">graceful</div>
-                <div value="strong">strong</div>
-                <div value="stealthy">stealthy</div>
+            <div class="row">
+                I am a
+                
+                <div class="select" name="descriptor">
+                    <div>(descriptor)</div>
+                    <div value="tough">tough</div>
+                    <div value="clever">clever</div>
+                    <div value="graceful">graceful</div>
+                    <div value="strong">strong</div>
+                    <div value="stealthy">stealthy</div>
+                </div>
+                
+                <div class="select" name="type">
+                    <div>(type)</div>
+                    <div value="glaive">glaive</div>
+                    <div value="nano">nano</div>
+                    <div value="jack">jack</div>
+                </div>
+                
+                who
+                
+                <div class="select" name="focus">
+                    <div>(focus)</div>
+                    <div value="controls">controls beasts</div>
+                    <div value="crafts">crafts illusions</div>
+                    <div value="explores">explores dark places</div>
+                    <div value="commands">commands mental powers</div>
+                    <div value="exists">exists partially out of phase</div>
+                </div>.
             </div>
             
-            <div class="select" name="type">
-                <div>(type)</div>
-                <div value="glaive">glaive</div>
-                <div value="nano">nano</div>
-                <div value="jack">jack</div>
-            </div>
+            <p>Code: (<a class="code-toggle" href="#example-5-code">toggle</a>)</p>
             
-            who
-            
-            <div class="select" name="focus">
-                <div>(focus)</div>
-                <div value="controls">controls beasts</div>
-                <div value="crafts">crafts illusions</div>
-                <div value="explores">explores dark places</div>
-                <div value="commands">commands mental powers</div>
-                <div value="exists">exists partially out of phase</div>
-            </div>.
+            <pre id="example-5-code">
+            &lt;div class=&quot;row&quot;&gt;
+                I am a
+                
+                &lt;div class=&quot;select&quot; name=&quot;descriptor&quot;&gt;
+                    &lt;div&gt;(descriptor)&lt;/div&gt;
+                    &lt;div value=&quot;tough&quot;&gt;tough&lt;/div&gt;
+                    &lt;div value=&quot;clever&quot;&gt;clever&lt;/div&gt;
+                    &lt;div value=&quot;graceful&quot;&gt;graceful&lt;/div&gt;
+                    &lt;div value=&quot;strong&quot;&gt;strong&lt;/div&gt;
+                    &lt;div value=&quot;stealthy&quot;&gt;stealthy&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;select&quot; name=&quot;type&quot;&gt;
+                    &lt;div&gt;(type)&lt;/div&gt;
+                    &lt;div value=&quot;glaive&quot;&gt;glaive&lt;/div&gt;
+                    &lt;div value=&quot;nano&quot;&gt;nano&lt;/div&gt;
+                    &lt;div value=&quot;jack&quot;&gt;jack&lt;/div&gt;
+                &lt;/div&gt;
+                
+                who
+                
+                &lt;div class=&quot;select&quot; name=&quot;focus&quot;&gt;
+                    &lt;div&gt;(focus)&lt;/div&gt;
+                    &lt;div value=&quot;controls&quot;&gt;controls beasts&lt;/div&gt;
+                    &lt;div value=&quot;crafts&quot;&gt;crafts illusions&lt;/div&gt;
+                    &lt;div value=&quot;explores&quot;&gt;explores dark places&lt;/div&gt;
+                    &lt;div value=&quot;commands&quot;&gt;commands mental powers&lt;/div&gt;
+                    &lt;div value=&quot;exists&quot;&gt;exists partially out of phase&lt;/div&gt;
+                &lt;/div&gt;.
+            &lt;/div&gt;
+            &lt;script&gt;
+                $('.select').selectbox();
+            &lt;/script&gt;</pre>
         </div>
-        
-        <p>Code: (<a class="code-toggle" href="#example-5-code">toggle</a>)</p>
-        
-        <pre id="example-5-code">
-        &lt;div class=&quot;row&quot;&gt;
-            I am a
-            
-            &lt;div class=&quot;select&quot; name=&quot;descriptor&quot;&gt;
-                &lt;div&gt;(descriptor)&lt;/div&gt;
-                &lt;div value=&quot;tough&quot;&gt;tough&lt;/div&gt;
-                &lt;div value=&quot;clever&quot;&gt;clever&lt;/div&gt;
-                &lt;div value=&quot;graceful&quot;&gt;graceful&lt;/div&gt;
-                &lt;div value=&quot;strong&quot;&gt;strong&lt;/div&gt;
-                &lt;div value=&quot;stealthy&quot;&gt;stealthy&lt;/div&gt;
-            &lt;/div&gt;
-            
-            &lt;div class=&quot;select&quot; name=&quot;type&quot;&gt;
-                &lt;div&gt;(type)&lt;/div&gt;
-                &lt;div value=&quot;glaive&quot;&gt;glaive&lt;/div&gt;
-                &lt;div value=&quot;nano&quot;&gt;nano&lt;/div&gt;
-                &lt;div value=&quot;jack&quot;&gt;jack&lt;/div&gt;
-            &lt;/div&gt;
-            
-            who
-            
-            &lt;div class=&quot;select&quot; name=&quot;focus&quot;&gt;
-                &lt;div&gt;(focus)&lt;/div&gt;
-                &lt;div value=&quot;controls&quot;&gt;controls beasts&lt;/div&gt;
-                &lt;div value=&quot;crafts&quot;&gt;crafts illusions&lt;/div&gt;
-                &lt;div value=&quot;explores&quot;&gt;explores dark places&lt;/div&gt;
-                &lt;div value=&quot;commands&quot;&gt;commands mental powers&lt;/div&gt;
-                &lt;div value=&quot;exists&quot;&gt;exists partially out of phase&lt;/div&gt;
-            &lt;/div&gt;.
-        &lt;/div&gt;
-        &lt;script&gt;
-            $('.select').selectbox();
-        &lt;/script&gt;</pre>
         
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
