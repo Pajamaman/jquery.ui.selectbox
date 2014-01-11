@@ -20,6 +20,8 @@ With a simple call to the selectbox function:
 
     $('#custard-preference').selectbox();
 
+---
+
 ### Options
 
 #### icon
@@ -30,6 +32,8 @@ Default: `<i class="icon-caret-down"></i>`
 By default it will use an icon from [Font Awesome](http://fontawesome.io/) version 3.2.1, but you can use jQuery UI icons, single characters, or whatever you want:
 
     $('.select').selectbox({ icon: '<span class="ui-icon ui-icon-circle-triangle-s"></span>' });
+
+---
 
 #### value
 
@@ -53,6 +57,8 @@ And you call selectbox like this (without passing a value):
 Then the default selected value will be "Select beard length...". If you want to select Short by default you would call selectbox like this:
 
     $('#beard-length').selectbox({ value: '1' });
+
+---
 
 ### To-do
 
