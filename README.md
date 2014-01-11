@@ -23,7 +23,8 @@ With a simple call to the selectbox function:
 ### Options
 
 #### icon
-Type: String
+
+Type: String  
 Default: `<i class="icon-caret-down"></i>`
 
 By default it will use an icon from [Font Awesome](http://fontawesome.io/) version 3.2.1, but you can use jQuery UI icons, single characters, or whatever you want:
@@ -31,7 +32,8 @@ By default it will use an icon from [Font Awesome](http://fontawesome.io/) versi
     $('.select').selectbox({ icon: '<span class="ui-icon ui-icon-circle-triangle-s"></span>' });
 
 #### value
-Type: String
+
+Type: String  
 Default: null
 
 The default selected value will be the first entry in the selectbox. For instance, if your markup looks like this:
@@ -54,6 +56,5 @@ Then the default selected value will be "Select beard length...". If you want to
 
 ### To-do
 
-I don't know if the value attribute is valid on a div element, or if I need to use something else there. The same goes for the name attribute.
-
-So far, I've only tested in Firefox 17.
+* I don't know if the value attribute is valid on a div element, or if I need to use something else there. The same goes for the name attribute.
+* So far, I've only tested in Firefox 17.
